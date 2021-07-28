@@ -1,0 +1,47 @@
+@import "options.css";
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+/*Typography
+--------------------------------------------------------------*/
+body,
+button,
+input,
+select,
+textarea {
+	color: #404040;
+	font-family: Poppins;
+	font-size: 14px;
+	line-height: 1.5;
+}
+
+h1,h2,h3,h4,h5,h6 {
+  font-family: Poppins;
+  font-weight: 600;
+  letter-spacing: 2px;
+}
+
+ul {
+    list-style-type: none;
+    padding-inline-start: 0.25rem;
+}
+
+#buildPackageButton {
+    align-content: center;
+    margin: 1rem 0 2rem 2rem;
+    padding: 0.5rem;
+    background-color: rgb(227, 72, 72);
+    color: lightgoldenrodyellow;
+    font-size: 1rem;
+}
+
+.choices {
+  display: flex;
+  justify-content: space-between;
+}
+
+.choices_colors {
+    margin-left: 1rem;
+}
+.choices_wheels {
+    margin-right: 1.5rem;
+}

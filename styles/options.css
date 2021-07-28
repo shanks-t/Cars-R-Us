@@ -1,0 +1,20 @@
+.options {
+    flex-basis: 24%;
+    margin: 0 2rem;
+    border: 1px dashed rgb(255, 64, 30);
+    padding: 1rem;
+    border-radius: 0.5rem;
+    box-shadow: 0.25rem 0.25rem 0.5rem rgb(143, 143, 143);
+}
+
+/* .choices {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .choices_colors {
+      margin-left: 1rem;
+  }
+  .choices_wheels {
+      margin-right: 1.5rem;
+  } */
