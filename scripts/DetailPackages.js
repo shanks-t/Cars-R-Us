@@ -41,14 +41,14 @@ const technologyPackage = foundTechnology.technology
    const wheels = getWheels()
    const foundWheels = wheels.find(
     (wheel) => {
-        return wheel.id === detailPackage.wheelsId
+        return wheels.id === detailPackage.wheelId
     }
-)
+) 
 const wheelsPackage = foundWheels.wheel
 
 
     return `<li>
-        Detail package order #${detailPackage.id} is ready to go and includes:  ${colorPackage}, ${interiorPackage}, ${technologyPackage} and ${wheelsPackage} wheels
+        Detail package order #${detailPackage.id} is ready to go and includes the ${colorPackage} color package, a ${interiorPackage}interior, our ${technologyPackage} tech option and the ${wheelsPackage} wheels
     </li>`
 }
 

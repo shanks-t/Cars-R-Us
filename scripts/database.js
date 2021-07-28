@@ -20,9 +20,9 @@ const database = {
     ],
     wheels: [
         {id: 1, wheel: "17-inch Pair Radial"},
-        {id: 1, wheel: "17-inch Pair Radial Black"},
-        {id: 1, wheel: "18-inch Pair Spoke Silver"},
-        {id: 1, wheel: "18-inch Pair Spoke Black"}
+        {id: 2, wheel: "17-inch Pair Radial Black"},
+        {id: 3, wheel: "18-inch Pair Spoke Silver"},
+        {id: 4, wheel: "18-inch Pair Spoke Black"}
     ],
     detailPackages: [
         {id: 1, colorId: 2, interiorId: 4, technologyId: 1, wheelsId: 3}
