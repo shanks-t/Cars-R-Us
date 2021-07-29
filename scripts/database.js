@@ -2,27 +2,27 @@ const database = {
     detailPackageBuilder: {},
     paintColors: [
         {id: 1, color: "Silver", price: 200},
-        {id: 2, color: "Midnight Blue", price: 200},
-        {id: 3, color: "Firebrick Red", price: 200},
-        {id: 4, color: "Spring Green", price: 200}
+        {id: 2, color: "Midnight Blue", price: 100},
+        {id: 3, color: "Firebrick Red", price: 300},
+        {id: 4, color: "Spring Green", price: 600}
     ],
     interiors: [
-        {id: 1, interior: "Beige Fabric", price: 300},
+        {id: 1, interior: "Beige Fabric", price: 100},
         {id: 2, interior: "Charcoal Fabric", price: 300},
-        {id: 3, interior: "White Leather", price: 300},
-        {id: 4, interior: "Black Leather", price: 300}
+        {id: 3, interior: "White Leather", price: 200},
+        {id: 4, interior: "Black Leather", price: 3000}
     ],
     technologies: [
-        {id: 1, technology: "Basic Package", price: 300},
-        {id: 2, technology: "Navigation Package", price: 300},
-        {id: 3, technology: "Visibility Package", price: 300},
-        {id: 4, technology: "Ultra Package", price: 300}
+        {id: 1, technology: "Basic Package", price: 100},
+        {id: 2, technology: "Navigation Package", price: 200},
+        {id: 3, technology: "Visibility Package", price: 500},
+        {id: 4, technology: "Ultra Package", price: 1000}
     ],
     wheels: [
-        {id: 1, wheel: "17-inch Pair Radial", price: 300},
+        {id: 1, wheel: "17-inch Pair Radial", price: 100},
         {id: 2, wheel: "17-inch Pair Radial Black", price: 300},
-        {id: 3, wheel: "18-inch Pair Spoke Silver", price: 300},
-        {id: 4, wheel: "18-inch Pair Spoke Black", price: 300}
+        {id: 3, wheel: "18-inch Pair Spoke Silver", price: 500},
+        {id: 4, wheel: "18-inch Pair Spoke Black", price: 900}
     ],
     detailPackages: [
         {id: 1, colorId: 2, interiorId: 4, technologyId: 1, wheelsId: 3}
