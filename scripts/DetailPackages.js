@@ -49,6 +49,7 @@ const technologyPackage = foundTechnology.technology
 const wheelsPackage = foundWheels.wheel
 
 const totalCost = foundWheels.price + foundTechnology.price + foundColor.price + foundInterior.price
+debugger
 const totalCostString = totalCost.toLocaleString("en-US", {
     style: "currency",
     currency: "USD"
@@ -70,7 +71,7 @@ export const DetailPackages = () => {
     let html = "<ul>"
 
     const listItems = packages.map(buildPackageListItem)
-
+    
     html += listItems.join("")
     html += "</ul>"
 
