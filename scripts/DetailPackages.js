@@ -20,12 +20,14 @@ const buildPackageListItem = (detailPackage) => {
         return interior.id === detailPackage.interiorId
     }
 )
+
 const interiorPackage = foundInterior.interior
 
    const colors = getColors()
    const foundColor = colors.find(
     (color) => {
         return color.id === detailPackage.colorId
+
     }
 )
 const colorPackage = foundColor.color
@@ -46,9 +48,15 @@ const technologyPackage = foundTechnology.technology
 ) 
 const wheelsPackage = foundWheels.wheel
 
+const totalCost = foundWheels.price + foundTechnology.price + foundColor.price + foundInterior.price
+const totalCostString = totalCost.toLocaleString("en-US", {
+    style: "currency",
+    currency: "USD"
+})
+
 
     return `<li>
-        Detail package order #${detailPackage.id} is ready to go and includes the ${colorPackage} color package, a ${interiorPackage}interior, our ${technologyPackage} tech option and the ${wheelsPackage} wheels
+        Detail package order #${detailPackage.id} is ready to go and includes the ${colorPackage} color package, a ${interiorPackage}interior, our ${technologyPackage} tech option and the ${wheelsPackage} wheels. Your total cost is ${totalCostString}
     </li>`
 }
 
