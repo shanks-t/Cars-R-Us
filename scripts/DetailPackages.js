@@ -1,8 +1,6 @@
 import { getDetailPackages, addDetailPackage } from "./database.js"
-import { getColors } from "./database.js"
-import { getTechnologies } from "./database.js"
-import { getInteriors } from "./database.js"
-import { getWheels } from "./database.js"
+import { getColors, getTechnologies, getInteriors, getWheels, getTypes } from "./database.js"
+
 
 document.addEventListener(
     "click",
@@ -48,7 +46,17 @@ const technologyPackage = foundTechnology.technology
 ) 
 const wheelsPackage = foundWheels.wheel
 
-const totalCost = foundWheels.price + foundTechnology.price + foundColor.price + foundInterior.price
+const types = getTypes()
+const foundType = types.find(
+ (type) => {
+     return type.id === detailPackage.typeId
+    }
+) 
+const type = foundType.type
+
+const totalCost = (foundWheels.price + foundTechnology.price + foundColor.price + foundInterior.price) * foundType.priceMult
+console.log("priceMult: ", foundType.priceMult)
+
 const totalCostString = totalCost.toLocaleString("en-US", {
     style: "currency",
     currency: "USD"
@@ -56,7 +64,8 @@ const totalCostString = totalCost.toLocaleString("en-US", {
 
 
     return `<li>
-        Detail package order #${detailPackage.id} is ready to go and includes the ${colorPackage} color package, a ${interiorPackage}interior, our ${technologyPackage} tech option and the ${wheelsPackage} wheels. Your total cost is ${totalCostString}
+        Detail package order #${detailPackage.id} is ready to go and includes the ${type} with the 
+        ${colorPackage} color package, a ${interiorPackage}interior, our ${technologyPackage} tech option and the ${wheelsPackage} wheels. Your total cost is ${totalCostString}
     </li>`
 }
 

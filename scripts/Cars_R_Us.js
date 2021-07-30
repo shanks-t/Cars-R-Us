@@ -3,6 +3,7 @@ import { Technologies } from "./Technologies.js"
 import { Colors } from "./PaintColors.js"
 import { Wheels } from "./Wheels.js"
 import { DetailPackages } from "./DetailPackages.js"
+import { CarTypes } from "./CarTypes.js"
 
 
 document.addEventListener(
@@ -35,6 +36,9 @@ export const Cars_R_Us = () => {
                 <h2>Wheel Types</h2>
                 ${Wheels()}
             </section>
+        </article>
+        <article>
+        ${CarTypes()}
         </article>
 
         <article>

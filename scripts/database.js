@@ -24,15 +24,20 @@ const database = {
         {id: 3, wheel: "18-inch Pair Spoke Silver", price: 300},
         {id: 4, wheel: "18-inch Pair Spoke Black", price: 300}
     ],
+    types: [
+        {id: 1, type: "Car", priceMult: 1},
+        {id: 2, type: "SUV", priceMult: 1.5},
+        {id: 3, type: "Truck", priceMult: 2.25}
+    ],
     detailPackages: [
-        {id: 1, colorId: 2, interiorId: 4, technologyId: 1, wheelsId: 3}
+        {id: 1, colorId: 2, interiorId: 4, technologyId: 1, wheelsId: 3, typeId: 2}
     ]
 }
 
 export const addDetailPackage = () => {
     // Copy the current state of user choices
     const newDetailPackage = {...database.detailPackageBuilder}
-
+    debugger
     // Add a new primary key to the object
     const lastIndex = database.detailPackages.length - 1
     newDetailPackage.id = database.detailPackages[lastIndex].id + 1
@@ -63,6 +68,9 @@ export const getTechnologies = () => {
 export const getWheels = () => {
     return database.wheels.map(wheel => ({...wheel}))
 }
+export const getTypes = () => {
+    return database.types.map(type => ({...type}))
+}
 export const getDetailPackages = () => {
     return database.detailPackages.map(detailPackage => ({...detailPackage}))
 }
@@ -81,4 +89,7 @@ export const setTechnology = (id) => {
 
 export const setWheels = (id) => {
     database.detailPackageBuilder.wheelsId = id
+}
+export const setType = (id) => {
+    database.detailPackageBuilder.typeId = id
 }
